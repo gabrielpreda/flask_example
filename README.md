@@ -5,14 +5,14 @@ This is an example of using Flask to create an API for an Python program.
 The service is exposing several endpoints as following:
 
 * GET /status - return the status of the service
-* GET /samples - 1 parameter: spec - if provided, return this species cardinality, otherwise return all samples cardinality
-* POST /prediction_class - 2 parameters: sepal_length & petal_length, predict the class (model is RandomForest)
+* GET train - train the model IrisModel, from model module
+* POST /species - 2 parameters: sepal_length & petal_length, predict the class by calling the predict function of model module (model is RandomForest)
 
 # Source files
 
 The following files are included in the project:
-* train_model.py - script to train the model; a RandomForest model is trained to predict the species of iris
-* app.py - API using Flask; to predict the species, a pretrained model (build in train_model.py) is load
+* model/model.py - module containinin the IrisModel class: train the model, predict using the trianing model 
+* app.py - API using Flask; to predict the species, a pretrained model (build in model.py using) is load
 
 # Usage
 
