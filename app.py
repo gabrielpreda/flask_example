@@ -2,7 +2,6 @@ import json
 import logging
 import logging.config
 import os
-import threading
 
 from flask import Flask, jsonify, request, abort
 
